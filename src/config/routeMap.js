@@ -4,6 +4,10 @@ const Dashboard = Loadable({
   loader: () => import(/*webpackChunkName:'Dashboard'*/ '@/views/dashboard'),
   loading: Loading
 });
+const Experience = Loadable({
+  loader: () => import(/*webpackChunkName:'Experience'*/ '@/views/experience'),
+  loading: Loading
+});
 const Tools = Loadable({
   loader: () => import(/*webpackChunkName:'Tools'*/ '@/views/tools'),
   loading: Loading
@@ -104,6 +108,7 @@ const Bug = Loadable({
 
 export default [
   { path: '/dashboard', component: Dashboard, roles: ['admin', 'editor', 'guest'] },
+  { path: '/experience', component: Experience, roles: ['admin', 'editor', 'guest'] },
   { path: '/tools', component: Tools, roles: ['admin', 'editor', 'guest'] },
   { path: '/about', component: About, roles: ['admin', 'editor', 'guest'] },
   { path: '/doc', component: Doc, roles: ['admin', 'editor', 'guest'] },
