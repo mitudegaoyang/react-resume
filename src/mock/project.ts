@@ -1,27 +1,26 @@
-import Mock from 'mockjs';
-let List = [];
-const count = 100;
+import * as _ from 'lodash';
+import PROCONFIG from '../config/proConfig';
+type projectType = projectItemType[];
+type projectItemType = {
+  id?: number;
+  title: string;
+  status?: string;
+  tags?: string[];
+  img?: string;
+  date: string;
+};
+let List: projectType = PROCONFIG.map((item, index) => {
+  let data = _.merge({ id: index + 1 }, item);
+  return data;
+});
 
-for (let i = 0; i < count; i++) {
-  List.push(
-    Mock.mock({
-      id: i,
-      title: '@ctitle(5, 10)',
-      author: '@cname',
-      readings: '@integer(300, 5000)',
-      'star|1-3': '★',
-      'status|1': ['published', 'draft'],
-      date: '@datetime'
-    })
-  );
-}
 export default {
-  tableList: (config) => {
-    const { pageNumber, pageSize, title, status, star } = JSON.parse(config.body);
+  projectList: (config: any) => {
+    const { pageNumber, pageSize, title, status, tags } = JSON.parse(config.body);
     let start = (pageNumber - 1) * pageSize;
     let end = pageNumber * pageSize;
-    let mockList = List.filter((item) => {
-      if (star && item.star.length !== star) return false;
+    let mockList = List.filter((item: projectItemType) => {
+      if (tags && !item.tags?.includes(tags)) return false;
       if (status && item.status !== status) return false;
       if (title && item.title.indexOf(title) < 0) return false;
       return true;
@@ -35,7 +34,7 @@ export default {
       }
     };
   },
-  deleteItem: (config) => {
+  deleteItem: (config: any) => {
     const { id } = JSON.parse(config.body);
     const item = List.filter((item) => item.id === id);
     const index = List.indexOf(item[0]);
@@ -44,7 +43,7 @@ export default {
       code: 20000
     };
   },
-  editItem: (config) => {
+  editItem: (config: any) => {
     const data = JSON.parse(config.body);
     const { id } = data;
     const item = List.filter((item) => item.id === id);

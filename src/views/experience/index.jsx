@@ -1,21 +1,22 @@
 import EXPCONFIG from '@/config/expConfig.ts'; // 引如工作经历数据
-import { Card, Icon, Timeline } from 'antd';
+import { Card, Timeline } from 'antd';
+// import { Card, Icon, Timeline } from 'antd';
 import dayjs from 'dayjs';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './index.less';
 
-const data = [
-  {
-    title: 'Author',
-    key: 'author',
-    dataIndex: 'author',
-    width: 100,
-    align: 'center',
-    info: 'Create a services site 2015-09-01',
-    dot: <Icon type="clock-circle-o" style={{ fontSize: '16px' }} />
-  }
-];
+// const data = [
+//   {
+//     title: 'Author',
+//     key: 'author',
+//     dataIndex: 'author',
+//     width: 100,
+//     align: 'center',
+//     info: 'Create a services site 2015-09-01',
+//     dot: <Icon type="clock-circle-o" style={{ fontSize: '16px' }} />
+//   }
+// ];
 
 class Experience extends Component {
   state = {
@@ -24,7 +25,7 @@ class Experience extends Component {
 
   render() {
     return (
-      <div className="app-container">
+      <div className="app-container experience-container">
         <Card title="工作经历">
           <Timeline mode="alternate">
             {EXPCONFIG.map((item, index) => {
