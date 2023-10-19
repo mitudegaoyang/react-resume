@@ -1,5 +1,6 @@
 import { deleteItem, editItem, projectList } from '@/api/project';
 import {
+  Avatar,
   Button,
   Card,
   Collapse,
@@ -9,14 +10,12 @@ import {
   List,
   Pagination,
   Select,
-  Table,
   Tag,
   message
 } from 'antd';
 import React, { Component } from 'react';
 import './index.less';
 // import EditForm from './forms/editForm';
-const { Column } = Table;
 const { Panel } = Collapse;
 const statusEnum = {
   active: { label: '内网上线', color: 'blue' },
@@ -264,7 +263,22 @@ class TableComponent extends Component {
                 extra={item.img && <img width={272} alt="logo" src={item.img} />}
               >
                 <List.Item.Meta
-                  avatar={false}
+                  avatar={
+                    item.company.src ? (
+                      <Avatar src={item.company.src} />
+                    ) : (
+                      <Avatar
+                        style={{
+                          backgroundColor: item.company.color,
+                          verticalAlign: 'middle',
+                          opacity: 0.8
+                        }}
+                        src={item.company.src}
+                      >
+                        {item.company.name}
+                      </Avatar>
+                    )
+                  }
                   title={
                     <>
                       {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
