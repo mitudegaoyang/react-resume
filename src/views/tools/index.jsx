@@ -213,69 +213,70 @@ class WordCloudChart extends Component {
 
     let maskImage = new Image(); //可以根据图片形状生成有形状的词云图
     maskImage.src = require('@/assets/images/cloud.png');
-
-    this.state.chart.setOption({
-      backgroundColor: '#fff',
-      grid: {
-        left: '25%',
-        right: '25%'
-      },
-      title: {
-        text: '',
-        top: '16px',
-        left: '24px',
-        textStyle: {
-          fontSize: 16,
-          color: '#000',
-          fontWeight: 'normal'
-        }
-      },
-      series: [
-        {
-          type: 'wordCloud',
-          left: '10%', // X轴偏移量
-          top: '0%', // Y轴偏移量
-          width: '80%', // canvas宽度大小
-          height: '100%', // canvas高度大小
-          sizeRange: [12, 50], //  词典字体大小范围配置
-          rotationRange: [0, 0], // 词典字体旋转角度配置，默认不旋转
-          gridSize: 25, // 词典字体间距配置
-          layoutAnimation: true, // 为false词典过度会阻塞
-          maskImage: maskImage,
+    maskImage.onload = () => {
+      this.state.chart.setOption({
+        backgroundColor: '#fff',
+        grid: {
+          left: '25%',
+          right: '25%'
+        },
+        title: {
+          text: '',
+          top: '16px',
+          left: '24px',
           textStyle: {
-            // 词典样式配置
-            normal: {
-              color() {
-                // 颜色随机渐变
-                let colors = [
-                  '#c04851',
-                  '#f1939c',
-                  '#2b73af',
-                  '#0f59a4',
-                  '#c3d7df',
-                  '#1ba784',
-                  '#8cc269',
-                  '#fed71a',
-                  '#ff9900',
-                  '#f26b7f'
-                ];
-                return colors[parseInt(Math.random() * 10)];
+            fontSize: 16,
+            color: '#000',
+            fontWeight: 'normal'
+          }
+        },
+        series: [
+          {
+            type: 'wordCloud',
+            left: '10%', // X轴偏移量
+            top: '0%', // Y轴偏移量
+            width: '80%', // canvas宽度大小
+            height: '100%', // canvas高度大小
+            sizeRange: [12, 50], //  词典字体大小范围配置
+            rotationRange: [0, 0], // 词典字体旋转角度配置，默认不旋转
+            gridSize: 25, // 词典字体间距配置
+            layoutAnimation: true, // 为false词典过度会阻塞
+            maskImage: maskImage,
+            textStyle: {
+              // 词典样式配置
+              normal: {
+                color() {
+                  // 颜色随机渐变
+                  let colors = [
+                    '#c04851',
+                    '#f1939c',
+                    '#2b73af',
+                    '#0f59a4',
+                    '#c3d7df',
+                    '#1ba784',
+                    '#8cc269',
+                    '#fed71a',
+                    '#ff9900',
+                    '#f26b7f'
+                  ];
+                  return colors[parseInt(Math.random() * 10)];
+                }
               }
-            }
-          },
-          // 渲染词典数据
-          data: data
+            },
+            // 渲染词典数据
+            data: data
+          }
+        ],
+        animationEasing: 'elasticOut',
+        animationEasingUpdate: 'elasticOut',
+        animationDelay(idx) {
+          return idx * 20;
+        },
+        animationDelayUpdate(idx) {
+          return idx * 20;
         }
-      ],
-      animationEasing: 'elasticOut',
-      animationEasingUpdate: 'elasticOut',
-      animationDelay(idx) {
-        return idx * 20;
-      },
-      animationDelayUpdate(idx) {
-        return idx * 20;
-      }
-    });
+      });
+    };
   }
 
   initChart() {

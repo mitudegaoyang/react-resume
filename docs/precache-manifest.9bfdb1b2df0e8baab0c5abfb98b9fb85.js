@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb268b9ad8f061b5700faf80c59e3fe0",
+    "revision": "a7ed3c3ddcee0678386f92af47c4050e",
     "url": "/react-resume/index.html"
   },
   {
@@ -64,7 +64,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/css/UploadExcel.1a5ea30f.chunk.css"
   },
   {
-    "revision": "a7b05b33c17ace577450",
+    "revision": "8f3db010114bc1fa13d3",
     "url": "/react-resume/static/css/main.0b1b0ce4.chunk.css"
   },
   {
@@ -244,8 +244,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/js/Table.a584065a.chunk.js"
   },
   {
-    "revision": "e24f88fe0d85a72abb78",
-    "url": "/react-resume/static/js/Tools.f7b6851b.chunk.js"
+    "revision": "d00d13dfd6e0b91c6007",
+    "url": "/react-resume/static/js/Tools.e9c021ab.chunk.js"
   },
   {
     "revision": "70a2cc06a0e1a732f12a",
@@ -260,12 +260,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/js/Zip.c4640fa2.chunk.js"
   },
   {
-    "revision": "a7b05b33c17ace577450",
-    "url": "/react-resume/static/js/main.7d08b218.chunk.js"
+    "revision": "8f3db010114bc1fa13d3",
+    "url": "/react-resume/static/js/main.022c66ec.chunk.js"
   },
   {
-    "revision": "585ba115a6f83a44d265",
-    "url": "/react-resume/static/js/runtime-main.6c2e11af.js"
+    "revision": "3d5a5ecd73b62bce0a5f",
+    "url": "/react-resume/static/js/runtime-main.76d38b35.js"
   },
   {
     "revision": "9161e238b798c444b732dbbb7420a09e",
