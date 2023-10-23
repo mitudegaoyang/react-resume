@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7ed3c3ddcee0678386f92af47c4050e",
+    "revision": "a8d6299734101e9769f35b873e84a35b",
     "url": "/react-resume/index.html"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/css/43.f824c340.chunk.css"
   },
   {
-    "revision": "aad56a29a114cba9aa9f",
-    "url": "/react-resume/static/css/Dashboard.1cc03d08.chunk.css"
+    "revision": "9e391239c73b5ce1f5de",
+    "url": "/react-resume/static/css/Dashboard.e30b4fb7.chunk.css"
   },
   {
     "revision": "6727a9154394a29b8963",
@@ -168,7 +168,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/js/Clipboard.fb8a3b18.chunk.js"
   },
   {
-    "revision": "aad56a29a114cba9aa9f",
+    "revision": "9e391239c73b5ce1f5de",
     "url": "/react-resume/static/js/Dashboard.5ffce967.chunk.js"
   },
   {
@@ -264,8 +264,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-resume/static/js/main.022c66ec.chunk.js"
   },
   {
-    "revision": "3d5a5ecd73b62bce0a5f",
-    "url": "/react-resume/static/js/runtime-main.76d38b35.js"
+    "revision": "67cea9da4d2b7f60bfa0",
+    "url": "/react-resume/static/js/runtime-main.667254db.js"
   },
   {
     "revision": "9161e238b798c444b732dbbb7420a09e",
