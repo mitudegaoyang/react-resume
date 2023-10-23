@@ -16,6 +16,7 @@ import npm from '@/assets/icons/npm.svg';
 import ps from '@/assets/icons/ps.svg';
 import react from '@/assets/icons/react.svg';
 import sass from '@/assets/icons/sass.svg';
+import svn from '@/assets/icons/svn.svg';
 import user from '@/assets/icons/user.svg';
 import vscode from '@/assets/icons/vscode.svg';
 import vue from '@/assets/icons/vue.svg';
@@ -752,7 +753,7 @@ const ScrollAnimation = (props) => {
         widthStr: '96rem',
         backgroundColorStr: '',
         // backgroundImageStr: 'linear-gradient(-2deg,rgba(0,45,156,.75),#002d9c)',
-        backgroundImageStr: `url(${react})`,
+        backgroundImageStr: `url(${svn})`,
         topStr: '',
         rightStr: 'calc(50% - 213rem)',
         bottomStr: 'calc(50% - 532rem)',
@@ -828,10 +829,10 @@ const ScrollAnimation = (props) => {
         leftStr: 'calc(50% - 90rem)',
         className: 'e-square',
         parentClassName: 'effect-box',
-        opacity: 0.4,
+        opacity: 1,
         opacityAnimMap: new Map([
-          [0, 0.4], // [帧，值]
-          [0.6, 1]
+          [0, 1], // [帧，值]
+          [0.6, 0.6]
         ]),
         transform: {
           translate3d: { x: 0, y: 0, z: 0 },
