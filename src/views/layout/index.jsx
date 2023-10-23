@@ -1,17 +1,23 @@
-import React from "react";
-import { connect } from "react-redux";
-import Content from "./Content";
-import Header from "./Header";
-import RightPanel from "./RightPanel";
-import Sider from "./Sider";
-import TagsView from "./TagsView";
-import { Layout } from "antd";
+import { Layout } from 'antd';
+import React from 'react';
+import { connect } from 'react-redux';
+import Content from './Content';
+import Header from './Header';
+import RightPanel from './RightPanel';
+import Sider from './Sider';
+import TagsView from './TagsView';
 const Main = (props) => {
   const { tagsView } = props;
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: '100vh' }}>
       <Sider />
-      <Layout>
+      <Layout
+        onScroll={(e) => {
+          window.$scrollTop = e.target.scrollTop;
+          window.$scrollHeight = e.target.scrollHeight;
+          window.$clientHeight = e.target.clientHeight;
+        }}
+      >
         <Header />
         {tagsView ? <TagsView /> : null}
         <Content />

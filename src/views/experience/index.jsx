@@ -30,7 +30,11 @@ class Experience extends Component {
           <Timeline mode="alternate">
             {EXPCONFIG.map((item, index) => {
               return (
-                <Timeline.Item color={index % 2 === 0 ? '#FFAD2C' : '#50ABF8'} dot={item.dot}>
+                <Timeline.Item
+                  color={index % 2 === 0 ? '#FFAD2C' : '#50ABF8'}
+                  dot={item.dot}
+                  key={index}
+                >
                   <div
                     className="time-wrapper"
                     style={{ color: index % 2 === 0 ? '#FFAD2C' : '#50ABF8' }}
@@ -47,8 +51,12 @@ class Experience extends Component {
                     <span className="job-wrapper">{item.job}</span>
                   </p>
                   <p className="content-wrapper">{item.content}</p>
-                  {item.describe.map((dItem) => {
-                    return <p className="describe-wrapper">{dItem}</p>;
+                  {item.describe.map((dItem, dindex) => {
+                    return (
+                      <p className="describe-wrapper" key={dindex}>
+                        {dItem}
+                      </p>
+                    );
                   })}
                 </Timeline.Item>
               );

@@ -217,8 +217,8 @@ class WordCloudChart extends Component {
     this.state.chart.setOption({
       backgroundColor: '#fff',
       grid: {
-        left: '5%',
-        right: '5%'
+        left: '25%',
+        right: '25%'
       },
       title: {
         text: '',
@@ -233,9 +233,9 @@ class WordCloudChart extends Component {
       series: [
         {
           type: 'wordCloud',
-          left: '0%', // X轴偏移量
+          left: '10%', // X轴偏移量
           top: '0%', // Y轴偏移量
-          width: '100%', // canvas宽度大小
+          width: '80%', // canvas宽度大小
           height: '100%', // canvas高度大小
           sizeRange: [12, 50], //  词典字体大小范围配置
           rotationRange: [0, 0], // 词典字体旋转角度配置，默认不旋转

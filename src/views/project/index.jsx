@@ -298,12 +298,12 @@ class TableComponent extends Component {
                     </>
                   }
                 />
-                {item.description.map((ditem) => {
-                  return <p>{ditem}</p>;
+                {item.description.map((ditem, index) => {
+                  return <p key={index}>{ditem}</p>;
                 })}
                 <ul className="content-wrapper">
-                  {item.content.map((citem) => {
-                    return <li>{citem}</li>;
+                  {item.content.map((citem, index) => {
+                    return <li key={index}>{citem}</li>;
                   })}
                 </ul>
               </List.Item>

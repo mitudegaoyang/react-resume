@@ -1,42 +1,12 @@
-import { Col, Row } from "antd";
-import React, { useState } from "react";
-import BarChart from "./components/BarChart";
-import BoxCard from "./components/BoxCard";
-import LineChart from "./components/LineChart";
-import PanelGroup from "./components/PanelGroup";
-import PieChart from "./components/PieChart";
-import RaddarChart from "./components/RaddarChart";
-import TransactionTable from "./components/TransactionTable";
-import "./index.less";
-
-const lineChartDefaultData = {
-  "New Visits": {
-    expectedData: [100, 120, 161, 134, 105, 160, 165],
-    actualData: [120, 82, 91, 154, 162, 140, 145],
-  },
-  Messages: {
-    expectedData: [200, 192, 120, 144, 160, 130, 140],
-    actualData: [180, 160, 151, 106, 145, 150, 130],
-  },
-  Purchases: {
-    expectedData: [80, 100, 121, 104, 105, 90, 100],
-    actualData: [120, 90, 100, 138, 142, 130, 130],
-  },
-  Shoppings: {
-    expectedData: [130, 140, 141, 142, 145, 150, 160],
-    actualData: [120, 82, 91, 154, 162, 140, 130],
-  },
-};
+import React from 'react';
+import ScrollAnimation from './components/ScrollAnimation';
+import './index.less';
 
 const Dashboard = () => {
-  const [lineChartData, setLineChartData] = useState(
-    lineChartDefaultData["New Visits"]
-  );
-
-  const handleSetLineChartData = (type) => setLineChartData(lineChartDefaultData[type]);
-
   return (
     <div className="app-container">
+      <ScrollAnimation />
+
       {/* <a
         href="https://github.com/NLRX-WJC/react-antd-admin-template"
         target="_blank"
@@ -44,14 +14,14 @@ const Dashboard = () => {
         className="github-corner"
       ></a> */}
 
-      <PanelGroup handleSetLineChartData={handleSetLineChartData} />
+      {/* <PanelGroup handleSetLineChartData={handleSetLineChartData} />
 
       <LineChart
         chartData={lineChartData}
         styles={{
           padding: 12,
-          backgroundColor: "#fff",
-          marginBottom: "25px",
+          backgroundColor: '#fff',
+          marginBottom: '25px'
         }}
       />
 
@@ -80,21 +50,14 @@ const Dashboard = () => {
           md={24}
           lg={12}
           xl={12}
-          style={{ paddingRight: "8px", marginBottom: "30px" }}
+          style={{ paddingRight: '8px', marginBottom: '30px' }}
         >
           <TransactionTable />
         </Col>
-        <Col
-          xs={24}
-          sm={24}
-          md={24}
-          lg={12}
-          xl={12}
-          style={{ marginBottom: "30px" }}
-        >
+        <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{ marginBottom: '30px' }}>
           <BoxCard />
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 };
