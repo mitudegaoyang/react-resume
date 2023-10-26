@@ -1,5 +1,5 @@
+import PROCONFIG from '@/config/proConfig';
 import * as _ from 'lodash';
-import PROCONFIG from '../config/proConfig';
 type projectType = projectItemType[];
 type projectItemType = {
   id?: number;
