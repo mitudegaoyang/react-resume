@@ -74,7 +74,7 @@ export default class App extends React.Component {
     let url = imgUrl;
     xhr.responseType = 'blob';
     xhr.onload = function () {
-      if (this.status == '200') {
+      if (this.status === '200') {
         let blob = this.response;
         let a = document.createElement('a');
         a.style = 'display:none';
@@ -181,6 +181,7 @@ export default class App extends React.Component {
           ]}
         >
           <img
+            alt={imgAlt}
             src={imgSrc}
             style={{
               width: 'auto',

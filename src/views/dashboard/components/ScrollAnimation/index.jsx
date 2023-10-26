@@ -1,5 +1,6 @@
 import Axure from '@/assets/icons/AxureRP.svg';
 import AntD from '@/assets/icons/ant-design.svg';
+import avatar from '@/assets/icons/avatar.svg';
 import css3 from '@/assets/icons/css3.svg';
 import dom from '@/assets/icons/dom.svg';
 import echart from '@/assets/icons/echart.svg';
@@ -17,7 +18,6 @@ import ps from '@/assets/icons/ps.svg';
 import react from '@/assets/icons/react.svg';
 import sass from '@/assets/icons/sass.svg';
 import svn from '@/assets/icons/svn.svg';
-import user from '@/assets/icons/user.svg';
 import vscode from '@/assets/icons/vscode.svg';
 import vue from '@/assets/icons/vue.svg';
 import React from 'react';
@@ -822,7 +822,7 @@ const ScrollAnimation = (props) => {
         widthStr: '180rem',
         backgroundColorStr: '',
         // backgroundImageStr: 'linear-gradient(159deg,#00b6ff,#007fff 67%,#0065ff 97%)',
-        backgroundImageStr: `url(${user})`,
+        backgroundImageStr: `url(${avatar})`,
         topStr: 'calc(50% - 90rem)',
         rightStr: '',
         bottomStr: '',
