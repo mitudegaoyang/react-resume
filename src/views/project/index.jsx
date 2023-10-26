@@ -1,4 +1,5 @@
 import { deleteItem, editItem, projectList } from '@/api/project';
+import ImagePreview from '@/components/ImagePreview';
 import {
   Avatar,
   Button,
@@ -260,7 +261,11 @@ class TableComponent extends Component {
                   <IconText type="like-o" text="156" key="list-vertical-like-o" />,
                   <IconText type="message" text="2" key="list-vertical-message" />
                 ]}
-                extra={item.img && <img width={272} alt="logo" src={item.img} />}
+                extra={
+                  item.img && (
+                    <ImagePreview key={item.title} width={272} alt="logo" src={item.img} />
+                  )
+                }
               >
                 <List.Item.Meta
                   avatar={

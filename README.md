@@ -5,16 +5,16 @@
 ## 功能
 
 - [x] 首页
-  - [ ] 首页 logo
+  - [x] 首页 logo
   - [ ] three.js 背景
 - [x] 工作经历
 - [x] 项目经历
-  - [ ] 图片放大
+  - [x] 图片放大
 - [x] 擅长技术
 - [x] 自我评价
 - [x] 作者博客
 - [x] 项目 header
-  - [ ] 个人头像
+  - [x] 个人头像
 
 ## 涵盖知识点
 
@@ -32,5 +32,7 @@
 - [echarts-wordcloud npm 词云](https://www.npmjs.com/package/echarts-wordcloud)
 - [react 项目使用 echarts-wordcloud（文字云）](https://www.cnblogs.com/art-poet/p/13936076.html)
 - [react+typeScript 框架 config-overrides 中设置 Alias 路径 报错的解决方法](https://blog.csdn.net/Zeng__Yi/article/details/106197891)
+- [最优雅解决 typescript 报错：“元素隐式具有 “any“ 类型，因为类型为 “string“ 的表达式不能用于索引类型”](https://blog.csdn.net/m0_47670683/article/details/124025972)
+- [react antd 实现图片自定义预览](https://cloud.tencent.com/developer/article/2233289)
 - [刘关化的前端简历 参考](https://github.com/liuguanhua/liuguanhua.github.io)
 - [宋楠的前端简历 参考](https://github.com/sunniejs/sunniejs.github.io)
