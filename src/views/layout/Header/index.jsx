@@ -1,40 +1,32 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Icon, Menu, Dropdown, Modal, Layout, Avatar } from "antd";
-import { Link } from "react-router-dom";
-import { logout, getUserInfo } from "@/store/actions";
-import FullScreen from "@/components/FullScreen";
-import Settings from "@/components/Settings";
-import Hamburger from "@/components/Hamburger";
-import BreadCrumb from "@/components/BreadCrumb";
-import "./index.less";
+import BreadCrumb from '@/components/BreadCrumb';
+import FullScreen from '@/components/FullScreen';
+import Hamburger from '@/components/Hamburger';
+import Settings from '@/components/Settings';
+import { getUserInfo, logout } from '@/store/actions';
+import { Avatar, Dropdown, Icon, Layout, Menu, Modal } from 'antd';
+import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './index.less';
 const { Header } = Layout;
 
 const LayoutHeader = (props) => {
-  const {
-    token,
-    avatar,
-    sidebarCollapsed,
-    logout,
-    getUserInfo,
-    showSettings,
-    fixedHeader,
-  } = props;
+  const { token, avatar, sidebarCollapsed, logout, getUserInfo, showSettings, fixedHeader } = props;
   token && getUserInfo(token);
   const handleLogout = (token) => {
     Modal.confirm({
-      title: "注销",
-      content: "确定要退出系统吗?",
-      okText: "确定",
-      cancelText: "取消",
+      title: '注销',
+      content: '确定要退出系统吗?',
+      okText: '确定',
+      cancelText: '取消',
       onOk: () => {
         logout(token);
-      },
+      }
     });
   };
   const onClick = ({ key }) => {
     switch (key) {
-      case "logout":
+      case 'logout':
         handleLogout(token);
         break;
       default:
@@ -49,10 +41,15 @@ const LayoutHeader = (props) => {
       <Menu.Item key="project">
         <a
           target="_blank"
-          href="https://github.com/NLRX-WJC/react-antd-admin-template"
+          href="https://github.com/mitudegaoyang/react-resume"
           rel="noopener noreferrer"
         >
           项目地址
+        </a>
+      </Menu.Item>
+      <Menu.Item key="old">
+        <a target="_blank" href="http://me2019.gaotianyang.top" rel="noopener noreferrer">
+          回到旧版
         </a>
       </Menu.Item>
       <Menu.Divider />
@@ -64,16 +61,16 @@ const LayoutHeader = (props) => {
     if (fixedHeader) {
       if (sidebarCollapsed) {
         styles = {
-          width: "calc(100% - 80px)",
+          width: 'calc(100% - 80px)'
         };
       } else {
         styles = {
-          width: "calc(100% - 200px)",
+          width: 'calc(100% - 200px)'
         };
       }
     } else {
       styles = {
-        width: "100%",
+        width: '100%'
       };
     }
     return styles;
@@ -83,10 +80,7 @@ const LayoutHeader = (props) => {
       {/* 这里是仿照antd pro的做法,如果固定header，
       则header的定位变为fixed，此时需要一个定位为relative的header把原来的header位置撑起来 */}
       {fixedHeader ? <Header /> : null}
-      <Header
-        style={computedStyle()}
-        className={fixedHeader ? "fix-header" : ""}
-      >
+      <Header style={computedStyle()} className={fixedHeader ? 'fix-header' : ''}>
         <Hamburger />
         <BreadCrumb />
         <div className="right-menu">
@@ -96,7 +90,7 @@ const LayoutHeader = (props) => {
             <Dropdown overlay={menu}>
               <div>
                 <Avatar shape="square" size="medium" src={avatar} />
-                <Icon style={{ color: "rgba(0,0,0,.3)" }} type="caret-down" />
+                <Icon style={{ color: 'rgba(0,0,0,.3)' }} type="caret-down" />
               </div>
             </Dropdown>
           </div>
@@ -110,7 +104,7 @@ const mapStateToProps = (state) => {
   return {
     ...state.app,
     ...state.user,
-    ...state.settings,
+    ...state.settings
   };
 };
 export default connect(mapStateToProps, { logout, getUserInfo })(LayoutHeader);
