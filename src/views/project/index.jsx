@@ -286,7 +286,13 @@ class TableComponent extends Component {
                   }
                   title={
                     <>
-                      {item.href ? <a href={item.href}>{item.title}</a> : <span>{item.title}</span>}
+                      {item.href ? (
+                        <a href={item.href} target="_blank">
+                          {item.title}
+                        </a>
+                      ) : (
+                        <span>{item.title}</span>
+                      )}
                       <span className="status-wrapper"> ({statusEnum[item.status].label})</span>
                     </>
                   }
