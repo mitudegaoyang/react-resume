@@ -5,7 +5,8 @@ const BASECONFIG = [
     tags: ['react', 'antd', 'singleSpa', 'emotion'],
     date: '2023/7 至 2023/9',
     img: 'https://z1.ax1x.com/2023/09/26/pP7xSPJ.png',
-    href: 'https://www.gaotianyang.top/projects/cbms/index.html',
+    href: 'https://www.gaotianyang.top/archives/20231120bdee9ed5/',
+    // href: 'https://www.gaotianyang.top/projects/cbms/index.html',
     // href: 'http://192.168.5.184:8080/console',
     description: [
       '全面预算管理系统覆盖预算目标制定、编制、执行、控制、调整、分析、考核等一系列预算管理活动，通过本系统，实现对医院的决策目标已量化方式进行资源配置，使医院的整个经营活动得到协调运转。',
@@ -28,7 +29,8 @@ const BASECONFIG = [
     tags: ['react', 'antd', 'singleSpa', 'cloudCharts'],
     date: '2023/4 至 2023/7',
     img: 'https://z1.ax1x.com/2023/09/26/pP7vvaF.png',
-    href: 'https://www.gaotianyang.top/projects/dhqs/index.html',
+    href: 'https://www.gaotianyang.top/archives/20231120671c213d/',
+    // href: 'https://www.gaotianyang.top/projects/dhqs/index.html',
     // href: 'http://192.168.5.172:9091',
     description: [
       '医院日常质量管理系统在满足医院对医疗质量监测和患者安全管理的要求，依从相关法规和国际标准，为医院管理者提供有效的质控工具。',
@@ -54,7 +56,8 @@ const BASECONFIG = [
     tags: ['react', 'antd', 'singleSpa', 'cloudCharts', 'tggLargeScreen'],
     date: '2022/10 至 2022/12',
     img: 'https://z1.ax1x.com/2023/09/26/pP7vx54.png',
-    href: 'https://www.gaotianyang.top/projects/pmp/index.html',
+    href: 'https://www.gaotianyang.top/archives/20231120ca98070b/',
+    // href: 'https://www.gaotianyang.top/projects/pmp/index.html',
     // href: 'http://192.168.5.172:8101',
     description: [
       '高质量发展建设管理是一个从规划到产出的管理闭环，起点是战略规划，终点是成果产出，以目标管理和差异管理作为两大抓手，其特点就是“要事优先，异常先见”，目标引领，动态纠偏。',
@@ -79,7 +82,8 @@ const BASECONFIG = [
     tags: ['react', 'antd', 'singleSpa', 'cloudCharts', 'formilyjs'],
     date: '2022/6 至 2023/6',
     img: 'https://z1.ax1x.com/2023/09/26/pP7vjVU.png',
-    href: 'https://www.gaotianyang.top/projects/qms/index.html',
+    href: 'https://www.gaotianyang.top/archives/20231120c020518/',
+    // href: 'https://www.gaotianyang.top/projects/qms/index.html',
     // href: 'https://192.168.5.172',
     description: [
       '医院全面质量管理系统，是为医院等级评审提供一个智能、便捷的管理平台。',
