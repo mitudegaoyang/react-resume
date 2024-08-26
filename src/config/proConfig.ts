@@ -5,7 +5,8 @@ const BASECONFIG = [
     tags: ['uniApp', 'uniCloud', 'weChat'],
     date: '2024/3 至 2024/4',
     img: 'https://s21.ax1x.com/2024/08/26/pAkix9P.png',
-    href: 'https://www.gaotianyang.top/archives/20231120bdee9ed5/',
+    // href: 'https://www.gaotianyang.top/archives/20231120bdee9ed5/',
+    href: '',
     description: [
       '推荐美图小程序是一款基于uni-app框架开发的高性能壁纸应用，支持多个平台，为用户提供便捷、丰富的壁纸资源体验。其特点包括简洁美观的UI设计、流畅的操作体验和丰富的功能。',
       '在开发过程中，注重组件封装和样式定义，提升了代码的可读性和可维护性。封装了自定义样式轮播图组件、公共头部组件（动态计算顶部高度，适配不同机型）、分类标题组件（使用插槽实现内容自定义）以及专题列表组件等。这些组件的封装不仅提高了代码的重用性，也使得页面结构更加清晰。',
