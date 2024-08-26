@@ -26,6 +26,9 @@ const statusEnum = {
 const tagsEnum = {
   react: { label: 'React', color: '#61dafb' },
   vue: { label: 'Vue', color: '#4fc08d' },
+  uniApp: { label: 'uni-app', color: '#42b983' },
+  uniCloud: { label: 'uni-cloud', color: '#e96900' },
+  weChat: { label: 'WeChat', color: '#2bae67' },
   antd: { label: 'antd', color: '#0170fe' },
   iView: { label: 'iView', color: '#2d8cf0' },
   vux: { label: 'Vux', color: '#35495e' },
