@@ -2,6 +2,8 @@
 
 基于 react-antd-admin 搭建的前端简历网站 [预览地址](https://me.gaotianyang.top)
 
+> node 版本 需要小于 v17.0.0
+
 ## 功能
 
 - [x] 首页
@@ -15,6 +17,7 @@
 - [x] 作者博客
 - [x] 项目 header
   - [x] 个人头像
+- [x] 更改项目默认登录状态
 
 ## 涵盖知识点
 
