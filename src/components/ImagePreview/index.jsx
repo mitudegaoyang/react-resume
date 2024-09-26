@@ -1,5 +1,6 @@
 import { Icon, Modal } from 'antd';
 import React, { useState } from 'react';
+import Draggable from 'react-draggable';
 import ImageControls from './ImageControls';
 import './index.less';
 
@@ -48,19 +49,29 @@ const ImagePreview = ({ src, alt, canDownload, width = 300 }) => {
           />
         }
       >
-        <img
-          alt={alt}
-          src={src}
-          style={{
-            width: 'auto',
-            height: 'auto',
-            maxWidth: '100vw',
-            maxHeight: 'calc(100vh - 158px)',
-            position: 'relative',
-            margin: '0 auto',
-            transform: imgTransform
-          }}
-        />
+        {visible && (
+          <Draggable>
+            <span>
+              <img
+                alt={alt}
+                src={src}
+                style={{
+                  width: 'auto',
+                  height: 'auto',
+                  maxWidth: '100vw',
+                  maxHeight: 'calc(100vh - 158px)',
+                  position: 'relative',
+                  margin: '0 auto',
+                  cursor: 'grab',
+                  userSelect: 'none',
+                  userDrag: 'none',
+                  WebkitUserDrag: 'none',
+                  transform: `${imgTransform}`
+                }}
+              />
+            </span>
+          </Draggable>
+        )}
       </Modal>
     </div>
   );
