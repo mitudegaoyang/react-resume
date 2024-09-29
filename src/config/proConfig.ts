@@ -25,7 +25,8 @@ const BASECONFIG = [
     company: {
       name: '个',
       src: ''
-    }
+    },
+    score: { difficulty: 4, duration: 2, experience: 5 }
   },
   {
     title: '医院预算管理',
@@ -49,7 +50,8 @@ const BASECONFIG = [
     company: {
       name: '蓬涞数据',
       src: 'https://img.bosszhipin.com/beijin/upload/com/img/20200507/0d819690df8f20c2b63b1e21c7543d55f4b8a06c408a69b236d996b0c5531650.jpg?x-oss-process=image/auto-orient,1/watermark,size_18,t_50,color_FFFFFF,text_QOacrOWbvueUseivpeWFrOWPuOazqOWGjOeUqOaIt-S4iuS8oA==,type_ZHJvaWRzYW5zZmFsbGJhY2s'
-    }
+    },
+    score: { difficulty: 5, duration: 2, experience: 4 }
   },
   {
     title: '日常质量管理',
@@ -76,7 +78,8 @@ const BASECONFIG = [
     company: {
       name: '蓬涞数据',
       src: 'https://img.bosszhipin.com/beijin/upload/com/img/20200507/0d819690df8f20c2b63b1e21c7543d55f4b8a06c408a69b236d996b0c5531650.jpg?x-oss-process=image/auto-orient,1/watermark,size_18,t_50,color_FFFFFF,text_QOacrOWbvueUseivpeWFrOWPuOazqOWGjOeUqOaIt-S4iuS8oA==,type_ZHJvaWRzYW5zZmFsbGJhY2s'
-    }
+    },
+    score: { difficulty: 4, duration: 3, experience: 4 }
   },
   {
     title: '高质量发展建设管理',
@@ -102,7 +105,8 @@ const BASECONFIG = [
     company: {
       name: '蓬涞数据',
       src: 'https://img.bosszhipin.com/beijin/upload/com/img/20200507/0d819690df8f20c2b63b1e21c7543d55f4b8a06c408a69b236d996b0c5531650.jpg?x-oss-process=image/auto-orient,1/watermark,size_18,t_50,color_FFFFFF,text_QOacrOWbvueUseivpeWFrOWPuOazqOWGjOeUqOaIt-S4iuS8oA==,type_ZHJvaWRzYW5zZmFsbGJhY2s'
-    }
+    },
+    score: { difficulty: 4, duration: 2, experience: 5 }
   },
   {
     title: '全面质量管理',
@@ -129,7 +133,8 @@ const BASECONFIG = [
       '使用 formilyjs 实现表单的快速搭建；',
       '使用 classnames 在 React 组件中方便地处理 className 字符串',
       '使用 eventemitter2 在组件间进行事件传递'
-    ]
+    ],
+    score: { difficulty: 5, duration: 5, experience: 5 }
   },
   {
     title: '亿欧数据',
@@ -156,7 +161,8 @@ const BASECONFIG = [
     company: {
       name: '亿欧EqualOcean',
       src: 'https://img.bosszhipin.com/beijin/mcs/chatphoto/20190304/1626535fe31f3e078dc5a77212e5ec7b425f6c7b973154f345e2b67e14af560f_s.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 5, duration: 5, experience: 4 }
   },
   {
     title: 'AICS 智慧工地',
@@ -178,7 +184,8 @@ const BASECONFIG = [
     company: {
       name: '日海智能',
       src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20210914/7bf6f160950405e984763b1b5902e7e343b3921030806ad35b2d4ec716841b1de8d4323f306eff7c.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 4, duration: 2, experience: 4 }
   },
   {
     title: 'DataMaxPro数据可视化应用',
@@ -203,7 +210,8 @@ const BASECONFIG = [
     company: {
       name: '日海智能',
       src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20210914/7bf6f160950405e984763b1b5902e7e343b3921030806ad35b2d4ec716841b1de8d4323f306eff7c.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 5, duration: 4, experience: 4 }
   },
   {
     title: 'AICube智盒管理系统',
@@ -227,7 +235,8 @@ const BASECONFIG = [
     company: {
       name: '日海智能',
       src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20210914/7bf6f160950405e984763b1b5902e7e343b3921030806ad35b2d4ec716841b1de8d4323f306eff7c.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 4, duration: 4, experience: 4 }
   },
   {
     title: 'AIMS智能媒体服务',
@@ -251,7 +260,8 @@ const BASECONFIG = [
     company: {
       name: '日海智能',
       src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20210914/7bf6f160950405e984763b1b5902e7e343b3921030806ad35b2d4ec716841b1de8d4323f306eff7c.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 4, duration: 5, experience: 4 }
   },
   {
     title: 'AIoT感知平台',
@@ -278,7 +288,8 @@ const BASECONFIG = [
     company: {
       name: '日海智能',
       src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20210914/7bf6f160950405e984763b1b5902e7e343b3921030806ad35b2d4ec716841b1de8d4323f306eff7c.jpg?x-oss-process=image/resize,w_120,limit_0'
-    }
+    },
+    score: { difficulty: 5, duration: 5, experience: 5 }
   },
   {
     title: '鱼猫金服PC版重构',
@@ -300,7 +311,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 4, duration: 3, experience: 4 }
   },
   {
     title: '鱼猫金服微信版官网重构',
@@ -322,7 +334,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 4, duration: 4, experience: 3 }
   },
   {
     title: '鱼猫金服业务推广活动页面',
@@ -340,7 +353,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 3, duration: 1, experience: 4 }
   },
   {
     title: '鱼猫金服大转盘活动页面',
@@ -358,7 +372,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 3, duration: 1, experience: 4 }
   },
   {
     title: '鱼猫金服新手活动页面重构',
@@ -375,7 +390,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 3, duration: 2, experience: 4 }
   },
   {
     title: '鱼猫金服企业端',
@@ -393,7 +409,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 4, duration: 2, experience: 4 }
   },
   {
     title: '鱼猫金服PC版日常维护',
@@ -410,7 +427,8 @@ const BASECONFIG = [
     company: {
       name: '鱼猫金服',
       src: 'https://gimg3.baidu.com/topone/src=https%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F32fa828ba61ea8d3385ea0109b0a304e251f58a2%3Fx-bce-process%3Dimage%2Fresize%2Cm_pad%2Cw_348%2Ch_348%2Ccolor_ffffff&refer=http%3A%2F%2Fwww.baidu.com&app=2011&size=f200,200&n=0&g=0n&er=404&q=75&fmt=auto&maxorilen2heic=2000000?sec=1697821200&t=6097042254d7774a68b1b5ef28486633'
-    }
+    },
+    score: { difficulty: 4, duration: 5, experience: 4 }
   },
   {
     title: '银信长远测评系统',
@@ -428,7 +446,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 3, duration: 2, experience: 4 }
   },
   {
     title: '张家口检察院OA管理',
@@ -449,7 +468,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 4, duration: 3, experience: 4 }
   },
   {
     title: '文献数字化后台管理',
@@ -473,7 +493,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 3, duration: 3, experience: 4 }
   },
   {
     title: '星路起航微信小游戏后台管理',
@@ -498,7 +519,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 3, duration: 2, experience: 4 }
   },
   {
     title: '诚轩OA管理系统',
@@ -522,7 +544,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 4, duration: 3, experience: 4 }
   },
   {
     title: 'Activity趋势健康',
@@ -538,7 +561,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 4, duration: 2, experience: 4 }
   },
   {
     title: 'Skillee在线考试',
@@ -555,7 +579,8 @@ const BASECONFIG = [
     company: {
       name: '毫末科技',
       src: 'https://gimg3.baidu.com/search/src=http%3A%2F%2Fgips3.baidu.com%2Fit%2Fu%3D584915274%2C2552692992%26fm%3D3030%26app%3D3030%26f%3DJPEG%3Fw%3D121%26h%3D74%26s%3D6BA633627298A790441125F403008022&refer=http%3A%2F%2Fwww.baidu.com&app=2021&size=f242,150&n=0&g=0n&q=100&fmt=auto?sec=1697821200&t=5ab166befb8659ce1c019466d076f277'
-    }
+    },
+    score: { difficulty: 3, duration: 2, experience: 3 }
   }
 ];
 

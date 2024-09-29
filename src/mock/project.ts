@@ -17,12 +17,17 @@ let List: projectType = PROCONFIG.map((item, index) => {
 export default {
   projectList: (config: any) => {
     const { pageNumber, pageSize, title, status, tags } = JSON.parse(config.body);
+
+    // 将标题转换为小写
+    const lowerCaseTitle = title ? title.toLowerCase() : '';
+
     let start = (pageNumber - 1) * pageSize;
     let end = pageNumber * pageSize;
     let mockList = List.filter((item: projectItemType) => {
       if (tags && !item.tags?.includes(tags)) return false;
       if (status && item.status !== status) return false;
-      if (title && item.title.indexOf(title) < 0) return false;
+      // if (title && item.title.indexOf(title) < 0) return false;
+      if (lowerCaseTitle && item.title.toLowerCase().indexOf(lowerCaseTitle) < 0) return false;
       return true;
     });
     let pageList = mockList.slice(start, end);

@@ -6,7 +6,7 @@ const initUserInfo = {
   avatar: '',
   token: isFirstLogin() ? 'admin-token' : getToken()
 };
-console.log(initUserInfo);
+
 export default function user(state = initUserInfo, action) {
   switch (action.type) {
     case types.USER_SET_USER_TOKEN:

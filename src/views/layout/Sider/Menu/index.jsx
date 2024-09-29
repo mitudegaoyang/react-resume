@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { Menu, Icon } from "antd";
-import { Link, withRouter } from "react-router-dom";
-import { Scrollbars } from "react-custom-scrollbars";
-import { connect } from "react-redux";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { addTag } from "@/store/actions";
-import { getMenuItemInMenuListByProperty } from "@/utils";
-import menuList from "@/config/menuConfig";
-import "./index.less";
+import menuList from '@/config/menuConfig';
+import { addTag } from '@/store/actions';
+import { getMenuItemInMenuListByProperty } from '@/utils';
+import { Icon, Menu } from 'antd';
+import React, { Component } from 'react';
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import { Scrollbars } from 'react-custom-scrollbars';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
+import './index.less';
 const SubMenu = Menu.SubMenu;
 // 重新记录数组顺序
 const reorder = (list, startIndex, endIndex) => {
@@ -20,14 +20,14 @@ const reorder = (list, startIndex, endIndex) => {
 class Meun extends Component {
   state = {
     menuTreeNode: null,
-    openKey: [],
+    openKey: []
   };
 
   // filterMenuItem用来根据配置信息筛选可以显示的菜单项
   filterMenuItem = (item) => {
     const { roles } = item;
     const { role } = this.props;
-    if (role === "admin" || !roles || roles.includes(role)) {
+    if (role === 'admin' || !roles || roles.includes(role)) {
       return true;
     } else if (item.children) {
       // 如果当前用户有此item的某个子item的权限
@@ -52,13 +52,11 @@ class Meun extends Component {
           );
         } else {
           // 查找一个与当前请求路径匹配的子Item
-          const cItem = item.children.find(
-            (cItem) => path.indexOf(cItem.path) === 0
-          );
+          const cItem = item.children.find((cItem) => path.indexOf(cItem.path) === 0);
           // 如果存在, 说明当前item的子列表需要打开
           if (cItem) {
             this.setState((state) => ({
-              openKey: [...state.openKey, item.path],
+              openKey: [...state.openKey, item.path]
             }));
           }
 
@@ -87,25 +85,21 @@ class Meun extends Component {
     if (!result.destination) {
       return;
     }
-    const _items = reorder(
-      this.state.menuTreeNode,
-      result.source.index,
-      result.destination.index
-    );
+    const _items = reorder(this.state.menuTreeNode, result.source.index, result.destination.index);
     this.setState({
-      menuTreeNode: _items,
+      menuTreeNode: _items
     });
   };
 
-  handleMenuSelect = ({ key = "/dashboard" }) => {
-    let menuItem = getMenuItemInMenuListByProperty(menuList, "path", key);
+  handleMenuSelect = ({ key = '/dashboard' }) => {
+    let menuItem = getMenuItemInMenuListByProperty(menuList, 'path', key);
     this.props.addTag(menuItem);
   };
 
   componentWillMount() {
     const menuTreeNode = this.getMenuNodes(menuList);
     this.setState({
-      menuTreeNode,
+      menuTreeNode
     });
     this.handleMenuSelect(this.state.openKey);
   }
@@ -120,11 +114,7 @@ class Meun extends Component {
               {(provided, snapshot) => (
                 <div {...provided.droppableProps} ref={provided.innerRef}>
                   {this.state.menuTreeNode.map((item, index) => (
-                    <Draggable
-                      key={item.key}
-                      draggableId={item.key}
-                      index={index}
-                    >
+                    <Draggable key={item.key} draggableId={item.key} index={index}>
                       {(provided, snapshot) => (
                         <div
                           ref={provided.innerRef}
