@@ -26,12 +26,15 @@
 - [x] 项目 header
   - [x] 个人头像
 - [x] 更改项目默认登录状态
+- [x] 处理项目警告
 
 ## 涵盖知识点
 
+- React Hooks 的使用
 - 原生 JS 实现钉钉官网滚动特效
 - echarts-wordcloud 绘图
 - echarts-wordcloud maskImage 正确使用
+- react-draggable 图片拖拽
 - axios、lodash、dayjs 使用
 - CSS3 的 animation 动画
 

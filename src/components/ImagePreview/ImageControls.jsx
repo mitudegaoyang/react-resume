@@ -60,26 +60,31 @@ const ImageControls = ({ onStateChange, visible, src, canDownload }) => {
   };
   // 下载
   const downloadImage = async () => {
-    const response = await fetch(src);
-    const blob = await response.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'image.jpg';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    try {
+      const response = await fetch(src);
+      if (!response.ok) throw new Error('Failed to fetch image');
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'image.jpg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Failed to download image:', error);
+    }
   };
 
   // 提取转换字符串的函数
-  const getTransformString = () => {
+  const getTransformString = useCallback(() => {
     const scaleTransform = `scale(${scale / 100})`;
     const rotateTransform = `rotate(${rotate}deg)`;
     const flipXTransform = flipX ? 'scaleX(-1)' : 'scaleX(1)';
     const flipYTransform = flipY ? 'scaleY(-1)' : 'scaleY(1)';
     return `${scaleTransform} ${rotateTransform} ${flipXTransform} ${flipYTransform}`;
-  };
+  }, [scale, rotate, flipX, flipY]);
 
   // 重置图片状态
   const resetImageState = useCallback(() => {
@@ -93,11 +98,11 @@ const ImageControls = ({ onStateChange, visible, src, canDownload }) => {
     if (!visible) {
       resetImageState();
     }
-  }, [visible]);
+  }, [visible, resetImageState]);
 
   useEffect(() => {
     onStateChange(getTransformString());
-  }, [scale, rotate, flipX, flipY]);
+  }, [getTransformString, onStateChange]);
 
   return (
     <div style={{ margin: '0 auto', textAlign: 'center' }}>

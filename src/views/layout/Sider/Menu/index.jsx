@@ -8,7 +8,9 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import './index.less';
+
 const SubMenu = Menu.SubMenu;
+
 // 重新记录数组顺序
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
@@ -35,6 +37,7 @@ class Meun extends Component {
     }
     return false;
   };
+
   // 菜单渲染
   getMenuNodes = (menuList) => {
     // 得到当前请求的路由路径
@@ -96,16 +99,36 @@ class Meun extends Component {
     this.props.addTag(menuItem);
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const menuTreeNode = this.getMenuNodes(menuList);
     this.setState({
       menuTreeNode
     });
-    this.handleMenuSelect(this.state.openKey);
+    this.handleMenuSelect({ key: this.props.location.pathname });
   }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.handleMenuSelect({ key: this.props.location.pathname });
+    }
+  }
+
   render() {
     const path = this.props.location.pathname;
     const openKey = this.state.openKey;
+    const { menuTreeNode } = this.state;
+
+    // 条件渲染，确保 menuTreeNode 不为空
+    if (!Array.isArray(menuTreeNode) || menuTreeNode.length === 0) {
+      return (
+        <div className="sidebar-menu-container">
+          <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
+            <p>Loading...</p> {/* 或者其他提示信息 */}
+          </Scrollbars>
+        </div>
+      );
+    }
+
     return (
       <div className="sidebar-menu-container">
         <Scrollbars autoHide autoHideTimeout={1000} autoHideDuration={200}>
@@ -134,6 +157,7 @@ class Meun extends Component {
                       )}
                     </Draggable>
                   ))}
+                  {provided.placeholder}
                 </div>
               )}
             </Droppable>
