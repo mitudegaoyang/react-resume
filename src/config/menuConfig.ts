@@ -23,7 +23,7 @@ const menuList = [
   },
   {
     title: '擅长技术',
-    path: '/tools',
+    path: '/technology',
     icon: 'tool',
     roles: ['admin', 'editor', 'guest']
   },
@@ -38,6 +38,29 @@ const menuList = [
     path: '/doc',
     icon: 'file',
     roles: ['admin', 'editor', 'guest']
+  },
+  {
+    title: '小工具',
+    path: '/tools',
+    icon: 'appstore',
+    roles: ['admin', 'editor'],
+    children: [
+      {
+        title: '复利计算器',
+        path: '/tools/calculator',
+        roles: ['admin', 'editor']
+      }
+      // {
+      //   title: 'Markdown',
+      //   path: '/tools/Markdown',
+      //   roles: ['admin', 'editor']
+      // },
+      // {
+      //   title: '拖拽列表',
+      //   path: '/tools/draggable',
+      //   roles: ['admin', 'editor']
+      // }
+    ]
   }
   // {
   //   title: '引导页',

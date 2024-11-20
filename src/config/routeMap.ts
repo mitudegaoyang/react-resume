@@ -12,12 +12,16 @@ const Project = Loadable({
   loader: () => import(/*webpackChunkName:'Project'*/ '@/views/project'),
   loading: Loading
 });
-const Tools = Loadable({
-  loader: () => import(/*webpackChunkName:'Tools'*/ '@/views/tools'),
+const Technology = Loadable({
+  loader: () => import(/*webpackChunkName:'Technology'*/ '@/views/technology'),
   loading: Loading
 });
 const Doc = Loadable({
   loader: () => import(/*webpackChunkName:'Doc'*/ '@/views/doc'),
+  loading: Loading
+});
+const Calculator = Loadable({
+  loader: () => import(/*webpackChunkName:'Calculator'*/ '@/views/calculator'),
   loading: Loading
 });
 const Guide = Loadable({
@@ -114,9 +118,10 @@ export default [
   { path: '/dashboard', component: Dashboard, roles: ['admin', 'editor', 'guest'] },
   { path: '/experience', component: Experience, roles: ['admin', 'editor', 'guest'] },
   { path: '/project', component: Project, roles: ['admin', 'editor', 'guest'] },
-  { path: '/tools', component: Tools, roles: ['admin', 'editor', 'guest'] },
+  { path: '/technology', component: Technology, roles: ['admin', 'editor', 'guest'] },
   { path: '/about', component: About, roles: ['admin', 'editor', 'guest'] },
   { path: '/doc', component: Doc, roles: ['admin', 'editor', 'guest'] },
+  { path: '/tools/calculator', component: Calculator, roles: ['admin', 'editor', 'guest'] },
   { path: '/guide', component: Guide, roles: ['admin', 'editor'] },
   { path: '/permission/explanation', component: Explanation, roles: ['admin'] },
   { path: '/permission/adminPage', component: AdminPage, roles: ['admin'] },

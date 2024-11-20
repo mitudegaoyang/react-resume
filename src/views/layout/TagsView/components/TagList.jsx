@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { Scrollbars } from "react-custom-scrollbars";
-import { Tag } from "antd";
-import { deleteTag, emptyTaglist, closeOtherTags } from "@/store/actions";
+import { closeOtherTags, deleteTag, emptyTaglist } from '@/store/actions';
+import { Tag } from 'antd';
+import React, { Component } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 class TagList extends Component {
   tagListContainer = React.createRef();
   contextMenuContainer = React.createRef();
   state = {
     left: 0,
     top: 0,
-    menuVisible: false,
+    menuVisible: false
   };
   handleClose = (tag) => {
     const { history, deleteTag, taglist } = this.props;
@@ -22,10 +22,7 @@ class TagList extends Component {
       history.push(taglist[length - 1].path);
     }
     // 如果关闭的是最后的tag ,且当前显示的也是最后的tag对应的页面，才做路由跳转
-    if (
-      path === taglist[length - 1].path &&
-      currentPath === taglist[length - 1].path
-    ) {
+    if (path === taglist[length - 1].path && currentPath === taglist[length - 1].path) {
       // 因为cutTaglist在最后执行，所以跳转到上一个tags的对应的路由，应该-2
       if (length - 2 > 0) {
         history.push(taglist[length - 2].path);
@@ -54,7 +51,7 @@ class TagList extends Component {
         left: clickX - menuMinWidth + 15,
         top: clickY,
         menuVisible: true,
-        currentTag: tag,
+        currentTag: tag
       });
     } else {
       // 反之，当鼠标点击的位置偏左，将菜单放在右边
@@ -62,15 +59,14 @@ class TagList extends Component {
         left: clickX,
         top: clickY,
         menuVisible: true,
-        currentTag: tag,
+        currentTag: tag
       });
     }
   };
   handleClickOutside = (event) => {
     const { menuVisible } = this.state;
     const isOutside = !(
-      this.contextMenuContainer.current &&
-      this.contextMenuContainer.current.contains(event.target)
+      this.contextMenuContainer.current && this.contextMenuContainer.current.contains(event.target)
     );
     if (isOutside && menuVisible) {
       this.closeContextMenu();
@@ -78,24 +74,24 @@ class TagList extends Component {
   };
   closeContextMenu() {
     this.setState({
-      menuVisible: false,
+      menuVisible: false
     });
   }
   componentDidMount() {
-    document.body.addEventListener("click", this.handleClickOutside);
+    document.body.addEventListener('click', this.handleClickOutside);
   }
   componentWillUnmount() {
-    document.body.removeEventListener("click", this.handleClickOutside);
+    document.body.removeEventListener('click', this.handleClickOutside);
   }
   handleCloseAllTags = () => {
     this.props.emptyTaglist();
-    this.props.history.push("/dashboard");
+    this.props.history.push('/dashboard');
     this.closeContextMenu();
   };
   handleCloseOtherTags = () => {
     const currentTag = this.state.currentTag;
     const { path } = currentTag;
-    this.props.closeOtherTags(currentTag)
+    this.props.closeOtherTags(currentTag);
     this.props.history.push(path);
     this.closeContextMenu();
   };
@@ -110,27 +106,26 @@ class TagList extends Component {
           autoHideTimeout={1000}
           autoHideDuration={200}
           hideTracksWhenNotNeeded={true}
-          renderView={(props) => (
-            <div {...props} className="scrollbar-container" />
-          )}
-          renderTrackVertical={(props) => (
-            <div {...props} className="scrollbar-track-vertical" />
-          )}
+          renderView={(props) => <div {...props} className="scrollbar-container" />}
+          renderTrackVertical={(props) => <div {...props} className="scrollbar-track-vertical" />}
         >
           <ul className="tags-wrap" ref={this.tagListContainer}>
-            {taglist.map((tag) => (
-              <li key={tag.path}>
-                <Tag
-                  onClose={this.handleClose.bind(null, tag)}
-                  closable={tag.path !== "/dashboard"}
-                  color={currentPath === tag.path ? "geekblue" : "gold"}
-                  onClick={this.handleClick.bind(null, tag.path)}
-                  onContextMenu={this.openContextMenu.bind(null, tag)}
-                >
-                  {tag.title}
-                </Tag>
-              </li>
-            ))}
+            {taglist.map(
+              (tag) =>
+                tag && (
+                  <li key={tag.path}>
+                    <Tag
+                      onClose={this.handleClose.bind(null, tag)}
+                      closable={tag.path !== '/dashboard'}
+                      color={currentPath === tag.path ? 'geekblue' : 'gold'}
+                      onClick={this.handleClick.bind(null, tag.path)}
+                      onContextMenu={this.openContextMenu.bind(null, tag)}
+                    >
+                      {tag.title}
+                    </Tag>
+                  </li>
+                )
+            )}
           </ul>
         </Scrollbars>
         {menuVisible ? (
@@ -151,6 +146,6 @@ export default withRouter(
   connect((state) => state.tagsView, {
     deleteTag,
     emptyTaglist,
-    closeOtherTags,
+    closeOtherTags
   })(TagList)
 );
