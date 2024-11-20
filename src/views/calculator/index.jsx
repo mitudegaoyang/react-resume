@@ -1,4 +1,4 @@
-import { Button, Card, Form, InputNumber, List } from 'antd';
+import { Button, Card, Form, InputNumber, List, Switch } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { calculateMonthlyValues, getInitialValue } from './utils';
 const Calculator = () => {
@@ -7,10 +7,17 @@ const Calculator = () => {
   const [rate, setRate] = useState(getInitialValue('rate', 10)); // 年化收益率
   const [period, setPeriod] = useState(getInitialValue('period', 11)); // 投资期限
   const [values, setValues] = useState([]); // 计算结果
+  const [isDescending, setIsDescending] = useState(true); // 默认为倒序
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const monthlyValues = calculateMonthlyValues(invest, rate, period, initialAmount);
+    setValues(monthlyValues);
+  };
+
+  const toggleSortOrder = (value) => {
+    setIsDescending(value);
+    const monthlyValues = calculateMonthlyValues(invest, rate, period, initialAmount, value);
     setValues(monthlyValues);
   };
 
@@ -66,11 +73,19 @@ const Calculator = () => {
         </Form>
         <h2>计算结果:</h2>
         <List
+          header={
+            <Switch
+              checkedChildren="倒序"
+              unCheckedChildren="正序"
+              defaultChecked
+              onChange={toggleSortOrder}
+            />
+          }
           bordered
           dataSource={values}
           renderItem={(value, index) => (
             <List.Item>
-              第{index + 1}个月初的账户价值: {value}
+              第{isDescending ? values.length - index : index + 1}个月初的账户价值: {value}
             </List.Item>
           )}
         />

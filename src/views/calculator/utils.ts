@@ -1,8 +1,15 @@
+// 从 localStorage 中读取初始值的函数
+export function getInitialValue(key: string, defaultValue: number) {
+  const savedValue = localStorage.getItem(key);
+  return savedValue ? parseFloat(savedValue) : defaultValue;
+}
+
 export function calculateMonthlyValues(
   invest: number,
   rate: number,
   period: number,
-  initialAmount = 0
+  initialAmount = 0,
+  sortByYearDesc = true
 ) {
   const r = rate / 12 / 100; // 将年化收益率转换为月利率
   let A = initialAmount + invest; // 第一个月初的账户价值
@@ -13,11 +20,9 @@ export function calculateMonthlyValues(
     monthlyValues.push(A.toFixed(2));
   }
 
-  return monthlyValues;
-}
+  if (sortByYearDesc) {
+    return monthlyValues.reverse(); // 直接翻转数组
+  }
 
-// 从 localStorage 中读取初始值的函数
-export function getInitialValue(key: string, defaultValue: number) {
-  const savedValue = localStorage.getItem(key);
-  return savedValue ? parseFloat(savedValue) : defaultValue;
+  return monthlyValues;
 }
