@@ -1,10 +1,10 @@
-import EXPCONFIG from '@/config/expConfig.ts'; // 引如工作经历数据
-import { Card, Timeline } from 'antd';
+import EXPCONFIG from "@/config/expConfig.ts"; // 引如工作经历数据
+import { Card, Timeline } from "antd";
 // import { Card, Icon, Timeline } from 'antd';
-import dayjs from 'dayjs';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './index.less';
+import dayjs from "dayjs";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./index.less";
 
 // const data = [
 //   {
@@ -20,7 +20,7 @@ import './index.less';
 
 class Experience extends Component {
   state = {
-    chart: null
+    chart: null,
   };
 
   render() {
@@ -31,18 +31,18 @@ class Experience extends Component {
             {EXPCONFIG.map((item, index) => {
               return (
                 <Timeline.Item
-                  color={index % 2 === 0 ? '#FFAD2C' : '#50ABF8'}
+                  color={index % 2 === 0 ? "#FFAD2C" : "#50ABF8"}
                   dot={item.dot}
                   key={index}
                 >
                   <div
                     className="time-wrapper"
-                    style={{ color: index % 2 === 0 ? '#FFAD2C' : '#50ABF8' }}
+                    style={{ color: index % 2 === 0 ? "#FFAD2C" : "#50ABF8" }}
                   >
-                    {`${dayjs(item.startTime).format('YYYY.MM')} - ${
-                      dayjs(item.endTime).format('YYYY.MM') !== 'Invalid date'
-                        ? dayjs(item.endTime).format('YYYY.MM')
-                        : '至今'
+                    {`${dayjs(item.startTime).format("YYYY.MM")} - ${
+                      dayjs(item.endTime).format("YYYY.MM") !== "Invalid Date"
+                        ? dayjs(item.endTime).format("YYYY.MM")
+                        : "至今"
                     }
                     `}
                   </div>
