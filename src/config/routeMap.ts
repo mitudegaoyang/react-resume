@@ -24,6 +24,10 @@ const Calculator = Loadable({
   loader: () => import(/*webpackChunkName:'Calculator'*/ '@/views/calculator'),
   loading: Loading
 });
+const RedEnvelope = Loadable({
+  loader: () => import(/*webpackChunkName:'RedEnvelope'*/ '@/views/redEnvelope'),
+  loading: Loading
+});
 const Guide = Loadable({
   loader: () => import(/*webpackChunkName:'Guide'*/ '@/views/guide'),
   loading: Loading
@@ -122,6 +126,7 @@ export default [
   { path: '/about', component: About, roles: ['admin', 'editor', 'guest'] },
   { path: '/doc', component: Doc, roles: ['admin', 'editor', 'guest'] },
   { path: '/tools/calculator', component: Calculator, roles: ['admin', 'editor', 'guest'] },
+  { path: '/tools/redEnvelope', component: RedEnvelope, roles: ['admin', 'editor', 'guest'] },
   { path: '/guide', component: Guide, roles: ['admin', 'editor'] },
   { path: '/permission/explanation', component: Explanation, roles: ['admin'] },
   { path: '/permission/adminPage', component: AdminPage, roles: ['admin'] },

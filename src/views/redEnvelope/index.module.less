@@ -1,0 +1,23 @@
+// 定义一个 mixin
+.month-value() {
+  font-size: 12px; /* 统一字体大小 */
+  padding: 4px 8px; /* 统一内边距 */
+  margin-bottom: 4px; /* 统一外边距 */
+  border-radius: 4px; /* 统一边框圆角 */
+}
+
+.bold {
+  .month-value(); /* 调用 mixin */
+  font-weight: bold;
+  color: #1da57a; /* 改变颜色 */
+  background-color: #f0f9eb; /* 添加背景色 */
+  border: 1px solid #d9f7e9; /* 添加边框 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.normal {
+  .month-value(); /* 调用 mixin */
+  color: #333; /* 深灰色 */
+  background-color: #f9f9f9; /* 浅灰色背景 */
+  border: 1px solid #eaeaea; /* 浅灰色边框 */
+}

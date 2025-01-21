@@ -49,6 +49,11 @@ const menuList = [
         title: '复利计算器',
         path: '/tools/calculator',
         roles: ['admin', 'editor']
+      },
+      {
+        title: '随机红包',
+        path: '/tools/redEnvelope',
+        roles: ['admin', 'editor']
       }
       // {
       //   title: 'Markdown',
