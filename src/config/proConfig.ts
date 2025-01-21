@@ -20,7 +20,7 @@ const BASECONFIG = [
     ],
     company: {
       name: '榜置科技',
-      src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20221110/7bf6f160950405e96d336406c9387c303ded715e6a539430577154f3f25bda84b415762965a35a22.jpg?x-oss-process=image/resize,w_120,limit_0'
+      src: 'https://img.bosszhipin.com/beijin/upload/com/workfeel/20221110/7bf6f160950405e985797b212d50f841b95544d8930c39af577154f3f25bda84b415762965a35a22.jpg?x-oss-process=image/resize,w_100,limit_0'
     },
     score: { difficulty: 5, duration: 3, experience: 5 }
   },
