@@ -26,7 +26,7 @@ const users: Users = {
     id: 'admin',
     role: 'admin',
     name: '高天阳',
-    avatar: 'https://z1.ax1x.com/2023/10/26/piZZ0un.png',
+    avatar: 'https://s11.ax1x.com/2023/10/26/piZZ0un.png',
     description: '拥有系统内所有菜单和路由权限'
   },
   'editor-token': {
