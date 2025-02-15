@@ -4,7 +4,7 @@ const BASECONFIG = [
     status: 'active',
     tags: ['react', 'antd', 'echarts'],
     date: '2024/10 至',
-    img: 'https://s21.ax1x.com/2025/01/20/pEkxKqf.png',
+    img: 'https://s21.ax1x.com/2025/02/15/pEKa5FS.png',
     href: 'https://www.gaotianyang.top/archives/202502061425c46c/',
     description: [
       '中诚信国际智慧分析平台专为金融机构、企业和投资者设计，提供深度数据挖掘和专业信用评级服务，助力复杂金融环境下的明智决策。平台涵盖企业融资、政府公共融资、金融机构、结构融资、非标产品、主权及负债评级等领域，集成首页、主体、区域和工具四大核心功能。',
